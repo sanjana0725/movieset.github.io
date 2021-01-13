@@ -1,0 +1,52 @@
+
+#header{
+    color: #fff;
+    background: #e74c3c;
+}
+#logo{
+    font-size: 4rem;
+}
+#menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#menu li{
+    display: inline-block;
+}
+#menu li a{
+    color: white;
+    padding: 25px 25px;
+    display: block;
+}
+#menu li a:hover{
+    background: #c0392b;
+}
+
+.container{
+
+}
+
+.im{
+    width: 200px;
+    height: 220px;
+    border-radius: 10px;
+}
+.hh{
+    margin-left: 250px;
+    margin-top: -205px;
+    font-style: italic;
+    font-weight: bold;
+}
+.p{
+    margin-left: 275px;
+    margin-top: -25px;
+}
+.pp{
+    margin-left: 250px;
+    margin-right: 100px;
+}
+.hhh{
+    margin-left: 250px;
+    margin-top: -50px;
+}

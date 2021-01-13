@@ -1,0 +1,73 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="bootstrap.css">
+        <link rel="stylesheet" href="contact.css">
+      
+    </head>
+    <body>
+
+
+        <form>
+            <fieldset>
+                <legend> Contact Form </legend>
+            
+
+                First Name: 
+                <input type="text" name="fname"> <br> <br>
+
+                Last Name:
+                <input type="text" name="fname"> <br> <br>
+
+                Gender:
+                <input type="radio" name="gender" id="male"> Male
+                <input type="radio" name="gender" id="female"> Female
+                <input type="radio" name="gender" id="other"> Other<br> <br>
+
+                Email:
+                <input type="email" name="email"><br> <br>
+
+                Mobile No:
+                <input type="number" id="quantity" name="quantity" min="1" max="10"><br> <br>
+
+                Address:
+                <textarea name="address" id="address" cols="10" rows="1"></textarea><br> <br>
+
+                Vehicles:
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                <label for="vehicle1"> I have a bike</label><br>
+                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                <label for="vehicle2"> I have a car</label><br>
+                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                <label for="vehicle3"> I have a boat</label><br> <br>
+
+                DOB:
+                <input type="date" id="dob" name="dob"><br> <br>
+
+                Card Type:
+                <select name="card type" id="card type">
+                    <option value=""> Select a card type</option>
+                    <option class="Gpay"> Gpay</option>
+                    <option class="Phone pay"> Phone pay</option>
+                    <option class="Debit "> Debit</option>
+                    <option class="Credit"> Credit</option>
+                    <option class="Cash on Payment"> Cash on Payment</option>
+                </select><br><br>
+
+                Resume:
+                <input type="file" id="myfile" name="myfile"><br> <br>
+
+                <input type="submit" value="Submit">
+
+                <input type="reset" value="Reset">
+
+
+                
+
+            </fieldset>
+        </form>

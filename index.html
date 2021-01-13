@@ -1,0 +1,537 @@
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="bootstrap.css">
+        <link rel="stylesheet" href="style.css">
+      
+    </head>
+
+    <body>
+
+     <div id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h1 id="logo">Movie Reviews</h1>
+                </div>
+                <div class="col-md-8">
+                    <ul id="menu" class="float-md-right">
+                        <li><a href="">  Home  </a></li>
+                   
+                        <li><a href="gallery.html">  Gallery </a></li>
+                        <li><a href="">  Contact Us </a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div><br>
+    <br>
+
+
+    <h2 style="text-align:center;
+     text-shadow: 2px 5px 5px red;">Hightlights</h2><br>
+    
+
+<div class="row">
+  <div class="column">
+    <img src="1.jpg" style="width:88%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="1.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="2.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="3.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="4.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+<div class="container">
+ 
+  <div class="row">
+    <div class="col-md-4" > <h4 class="hp"> Hindi Movies </h4></div>
+    <div class="col-md-4" > <h4 class="hp"> English Movies </h4> </div>
+    <div class="col-md-4" > <h4 class="hp"> Horrer Movies </h4></div>
+  </div>
+</div>
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.checked {
+  color: orange;
+}
+</style>
+<div class="container">
+  <h1>  </h1>
+  <p> </p>
+  <p> </p>
+  <div class="row" >
+    <div class="col-sm-4"  >
+
+      <div class="panel panel-default">
+
+      
+      <img class="iii" src="1.jpg">
+
+      <h3 class="hhh"> Chhalaang : </h3>
+      <p class="ppp"> Rating: 3.0</p>
+      <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<span class="fa fa-star"></span>
+
+
+      <h3 class="hhh"> Durgamati :  </h3>
+      <p class="ppp">  Rating: 3.0</p>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+
+      <h3 class="hhh"> Malang :  </h3>
+      <p class="ppp"> Rating: 4.0</p>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+
+      <h3 class="hhh"> Panga :  </h3>
+      <p class="ppp"> Rating: 4.0</p>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span> <br> 
+
+      <a class="btn" href="hms.html" role="button"> See All </a>
+
+    </div>
+  </div>
+
+  <div class="col-sm-4"  >
+
+    <div class="panel panel-default">
+    <img class="iii"  src="5.jpg">
+
+    <h3 class="hhh"> Joker :  </h3>
+    <p class="ppp"> Rating: 4.0</p>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+
+    <h3 class="hhh"> Rocketman : </h3>
+    <p class="ppp"> Rating: 3.0</p>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+
+    <h3 class="hhh"> Frozen 2 :  </h3>
+    <p class="ppp"> Rating: 3.0</p>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span>
+
+    <h3 class="hhh"> Midway : </h3>
+    <p class="ppp"> Rating: 3.0</p>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    <span class="fa fa-star"></span> <br>
+
+
+    <a class="btn" href="em.html " role="button"> See All </a>
+
+  </div>
+</div>
+
+
+    <div class="col-sm-4" >
+
+      <div class="panel panel-default">
+      <img class="iii"  src="6.jpg">
+
+      <h3 class="hhh">  The Nun: </h3>
+      <p class="ppp"> Rating: 4.0</p>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+
+      <h3 class="hhh"> The Mirror :  </h3>
+      <p class="ppp"> Rating: 3.0</p>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+    
+
+      <h3 class="hhh"> The Boy  : </h3>
+      <p class="ppp"> Rating: 4.0</p>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+
+      <h3 class="hhh"> The Past : </h3>
+      <p class="ppp"> Rating: 3.0</p>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span> <br>
+
+      <a class="btn" href="hm.html " role="button"> See All </a>
+
+</div>
+    </div>
+
+  </div>
+</div>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+<div class="container">
+ 
+  <div class="row">
+    <div class="col-md-4" > <h4 class="hp"> South Movies </h4></div>
+    <div class="col-md-4" > <h4 class="hp"> Web Series </h4> </div>
+    <div class="col-md-4" > <h4 class="hp"> Latest Songs </h4></div>
+  </div>
+</div>
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.checked {
+  color: orange;
+}
+</style>
+<div class="container">
+  <h1>  </h1>
+  <p> </p>
+  <p> </p>
+  <div class="row" >
+    <div class="col-sm-4"  >
+
+      <div class="panel panel-default">
+
+      
+      <img class="iii" src="7.jpg">
+
+      <h3 class="hhh"> Geeta Govinda : </h3>
+      <p class="ppp"> Rating: 4.0</p>
+      <span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+
+
+      <h3 class="hhh"> Smart Shanker :  </h3>
+      <p class="ppp">  Rating: 3.0</p>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+      <span class="fa fa-star"></span>
+
+      <h3 class="hhh"> Mahesh Babu :  </h3>
+      <p class="ppp"> Rating: 4.0</p>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+
+      <h3 class="hhh"> Dear Comrade :  </h3>
+      <p class="ppp"> Rating: 4.0</p>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span> <br> 
+
+      <a class="btn" href="sm.html" role="button"> See All </a>
+
+    </div>
+  </div>
+
+  <div class="col-sm-4"  >
+
+    <div class="panel panel-default">
+    <img class="iii"  src="8.jpg">
+
+    <h3 class="hhh"> Paatallok :  </h3>
+    <p class="ppp"> Rating: 4.0</p>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+
+    <h3 class="hhh"> Ludo : </h3>
+    <p class="ppp"> Rating: 4.0</p>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+
+    <h3 class="hhh"> Scam 1992 :  </h3>
+    <p class="ppp"> Rating: 4.0</p>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+
+    <h3 class="hhh"> Asur : </h3>
+    <p class="ppp"> Rating: 4.0</p>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span> <br>
+
+
+    <a class="btn" href="ws.html " role="button"> See All </a>
+
+  </div>
+</div>
+
+
+    <div class="col-sm-4" >
+
+      <div class="panel panel-default">
+      <img class="iii"  src="9.jpg">
+
+      <h3 class="hhh"> Nayan : </h3>
+      <p class="ppp"> Rating: 4.0</p>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+
+      <h3 class="hhh"> Nakhre :  </h3>
+      <p class="ppp"> Rating: 4.0</p>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+    
+
+      <h3 class="hhh"> Moto : </h3>
+      <p class="ppp"> Rating: 4.0</p>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+
+      <h3 class="hhh"> Relation : </h3>
+      <p class="ppp"> Rating: 4.0</p>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span> <br>
+
+      <a class="btn" href="s.html " role="button"> See All </a>
+
+</div>
+    </div>
+
+  </div>
+</div>
+<br>
+<br>
+
+
+
+<div class="container">
+  <h1 class="tr"> Trailers</h1>
+<div class="row">
+  <div class="col-sm-4">
+    <iframe width="360" height="315" src="https://www.youtube.com/embed/nf39Jpi3ZQ4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>" 
+  </div>
+  <div class="col-sm-4">
+    <iframe width="360" height="315" src="https://www.youtube.com/embed/xw0gE8QA1W0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>" 
+  </div>
+  <div class="col-sm-4">
+    <iframe width="360" height="315" src="https://www.youtube.com/embed/XaZ7jAPdecc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>"
+  </div>
+</div>
+</div>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+      <div id="testimonials" class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="section-head text-white">Testimonials</h2> <br>
+                </div>
+                <div class="col-md-6">
+                    <div class="testimonial">
+                        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta laboriosam blanditiis incidunt culpa unde minima cumque. Iure necessitatibus expedita magni!</p>
+                        <img src="1.jpg" height="80px" width="80px" alt="">
+                        <div class="author">Bill Gates</div>
+                        <div class="author-company">Microsoft</div>
+                    </div>
+                </div>
+                <div class="col-md-6"></div>
+                <div class="testimonial">
+                    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta laboriosam blanditiis incidunt culpa unde minima cumque. Iure necessitatibus expedita magni!</p>
+                    <img src="1.jpg"  height="80px" width="80px" alt="">
+                    <div class="author">Steve Jobs</div>
+                    <div class="author-company">Apple</div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+
+
+
+    </body>
